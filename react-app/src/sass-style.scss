@@ -1,0 +1,364 @@
+@import './_main-theme.scss', './_my-theme.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.main {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  border-radius: 3px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+/* sidebar styles */
+
+.sidebar {
+  padding: 60px 0 60px 0;
+  width: 402px;
+  height: calc(100% - 120px);
+  z-index: 2;
+  .title {
+    font: {
+      style: normal;
+      weight: 600;
+      size: 32px;
+    }
+    line-height: 30px;
+    padding-bottom: 15px;
+    width: 289px;
+  }
+  .name {
+    font: {
+      weight: 600;
+      size: 40px;
+    }
+    line-height: 50px;
+  }
+  .photo {
+    width: 385px;
+    height: 292px;
+    transition: transform 2s;
+  }
+  .contact-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .contact-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+  }
+  .contacts {
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 10px;
+    }
+  }
+  .hire-me {
+    font-size: 24px;
+  }
+  .languages {
+    .title {
+      margin-bottom: 25px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 15px;
+    }
+  }
+}
+
+
+/* main styles */
+
+.main-content {
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 60px 55px;
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    width: 660px;
+  }
+
+  /* summary styles */
+
+  .summary {
+    margin-bottom: 50px;
+    .summary-description {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  /* projects styles */
+  .projects {
+    margin-bottom: 50px;
+    ul {
+      width: 300px;
+      margin-top: 30px;
+    }
+    li {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      margin-left: 20px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  /* Skills styles */
+
+  .skills {
+    width: 620px;
+    margin-bottom: 50px;
+    .list-items {
+      display: flex;
+      justify-content: space-between;
+      ul {
+        width: 300px;
+      }
+      li {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  /* work styles */
+
+  .work {
+    margin-bottom: 50px;
+    .work-description {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 15px;
+    }
+  }
+
+  /* education styles */
+
+  .education {
+    .education-description {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+
+/* FORM */
+
+.form {
+  width: 600px;
+  height: 600px;
+  padding: 20px;
+  position: fixed;
+  left: calc(50% - 320px);
+  top: calc(50% - 320px);
+  h1, h2, table {
+    margin-top: 10px;
+  }
+  input,
+  select,
+  textarea {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    padding: 0 15px 0 15px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .contact-info {
+    table, td {
+      border-collapse: collapse;
+      border: 1px solid black;
+      padding: 10px 15px;
+    }
+  }
+  fieldset {
+    padding: 10px;
+  }
+  input {
+    &[type="email"] {
+      width: 460px;
+      height: 48px;
+      border-radius: 4px;
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
+      font: {
+        style: normal;
+        weight: 400;
+        size: 16px;
+      }
+      line-height: 150%;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.01em;
+      &:valid ~ .success,
+      &:invalid ~ .error {
+        display: block;
+      }
+    }
+    &[type="submit"] {
+      cursor: pointer;
+      min-width: 92px;
+      height: 32px;
+      border-radius: 6px;
+      padding: 4px 16px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+    }
+  }
+  label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+  }
+  textarea {
+    min-width: 460px;
+    min-height: 139px;
+    border-radius: 4px;
+  }
+  select {
+    width: 460px;
+    height: 48px;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    background: url(./img/mdi_arrow_drop_down.svg) no-repeat center right 0.75rem;
+    cursor: pointer;
+  }
+  .success, .error {
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    width: 385px;
+    flex-direction: column;
+  }
+  .main-content {
+    padding: 30px 25px;
+  }
+  .sidebar {
+    width: 385px;
+  }
+  .title {
+    width: 335px;
+  }
+  .skills {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .sidebar {
+    box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+  }
+  .photo-scale {
+    transform: scale(1.75) translate(21.5%, 21.5%);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 2s;
+  }
+  .work-description.previous {
+    opacity: 0.7;
+    transition: opacity 2s;
+  }
+  .work-description.previous:hover {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+}
+
+@keyframes contentUp {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@mixin anim($transition) {
+  animation: contentUp $transition linear;
+}
+.sidebar {
+  @include anim(1.5s);
+}
+.main-content {
+  @include anim(2s);
+}
+
+.form {
+  animation: form2x 2s ease-in-out;
+}
+@keyframes form2x {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,160 @@
+$white-color: #F3EFF5;
+$black-color: #454955;
+$backgroundColor-sidebar: #585467;
+$blue-color: #1C2E8C;
+$text-color-sidebar: #F3EFF5;
+$gray-color: #454955;
+$dark-color: #454955;
+
+$backgroundColor-button: #0048D9;
+$backgroundColor-button-hover: #002266;
+$backgroundColor-input: #F8FAFC;
+$text-color-input: #3B4256;
+$text-color-placeholder: #B8BCCA;
+$text-color-label: #6F7482;
+$red-color: #ED0131;
+$green-color: #0E6245;
+
+$space-primary: 40px;
+$space-secondary: 35px;
+$space-other: 30px;
+
+.my-theme {
+  .sidebar {
+    background-color: $backgroundColor-sidebar;
+  }
+  .name {
+    color: $blue-color;
+    margin: 0 0 $space-secondary $space-primary;
+  }
+  .photo {
+    margin: $space-secondary 0 50px 0;
+  }
+  .sidebar {
+    .title {
+      color: $text-color-sidebar;
+      border-bottom: 6px solid $text-color-sidebar;
+    }
+  }
+  .contacts {
+    margin-left: $space-primary;
+  }
+  .sidebar-title {
+    color: $white-color;
+  }
+  .contact-title {
+    color: $text-color-sidebar;
+    margin-top: $space-secondary;
+  }
+  .contacts {
+    p {
+      color: $text-color-sidebar;
+    }
+  }
+  .contact-link {
+    color: $blue-color;
+  }
+  .hire-me {
+    margin-left: $space-primary;
+  }
+  .languages {
+    margin: $space-secondary 0 0 $space-primary;
+  }
+  .languages {
+    p {
+      color: $text-color-sidebar;
+    }
+  }
+
+  .main-content {
+    background-color: $white-color;
+  }
+  .title {
+    color: $dark-color;
+    padding-bottom: $space-other;
+    border-bottom: 5px solid $black-color;
+  }
+
+  .summary-description {
+    color: $gray-color;
+    margin-top: $space-other;
+  }
+
+  .projects {
+    li, p {
+      color: $gray-color;
+    }
+    .repository-link {
+      color: $blue-color;
+    }
+  }
+
+  .skills {
+    .list-items {
+      margin-top: $space-other;
+      li {
+        color: $gray-color;
+      }
+    }
+  }
+
+  .work {
+    .title {
+      margin-bottom: $space-other;
+    }
+  }
+  .work-description {
+    color: $black-color;
+  }
+
+  .education-description {
+    color: $gray-color;
+    margin-top: $space-other;
+  }
+
+  .form {
+    label {
+      color: $text-color-label;
+    }
+    textarea {
+      background-color: $backgroundColor-input;
+    }
+    select {
+      color: $text-color-input;
+      background-color: $backgroundColor-input;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 1px solid $backgroundColor-button;
+    }
+    input {
+      &[type="email"] {
+        background-color: $backgroundColor-input;
+        color: $text-color-input;
+      }
+      &::placeholder {
+        color: $text-color-placeholder;
+      }
+      &[type="submit"] {
+        background-color: $backgroundColor-button;
+        color: $white-color;
+        &:hover {
+          background-color: $backgroundColor-button-hover;
+        }
+      }
+      &:valid {
+        border: 1px solid $green-color;
+      }
+      &:invalid {
+        border: 1px solid $red-color;
+      }
+    }
+    .success {
+      color: $green-color;
+    }
+    .error {
+      color: $red-color;
+    }
+  }
+}
