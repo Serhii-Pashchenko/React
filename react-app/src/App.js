@@ -1,9 +1,9 @@
 import './sass-style.css';
-import React from 'react';
 import Image from './Image';
 import photo from './photo.jpg';
 import Contacts from "./Contacts";
 import Experience from './Experience';
+import Counter from './Counter';
 
 function App() {
   function scale() {
@@ -92,7 +92,7 @@ function App() {
               </div>
 
               {/* Work */}
-              <Experience/>
+              <Experience jobTitle="Online Verification Specialist" companyName="INFUSEmedia" link="https://infusemedia.com" workDescription="verify the contact details of potential leads in accordance with standard operating procedures, identify clients’ needs, monitor lead tracking, research a variety of channels to find information about a potential client, prospecting, qualifying and generating new sales leads"/>
 
               {/* Education */}
               <div className="education">
@@ -103,6 +103,9 @@ function App() {
                       <span style={{fontWeight: 'bold'}}>Degree and major:</span> MS, Finance and сredit
                   </div>
               </div>
+
+              {/* Counter */}
+              <Counter/>
           </div>
       </div>
 
