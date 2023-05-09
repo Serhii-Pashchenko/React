@@ -4,6 +4,7 @@ import photo from './photo.jpg';
 import Contacts from "./Contacts";
 import Experience from './Experience';
 import Counter from './Counter';
+import Projects from './Projects';
 
 function App() {
   function scale() {
@@ -17,31 +18,6 @@ function App() {
       btn.scrollIntoView({behavior: 'smooth'});
     }
   });
-  
-  async function fetchRepos() {
-    const repos = await fetch('https://api.github.com/users/serhii-pashchenko/repos');
-    const data = await repos.json();
-
-    data.forEach(rep => {
-        let li = document.createElement('li');
-        document.getElementById('repos').appendChild(li);
-        let a = document.createElement('a');
-        a.classList.add('repository-link');
-        a.href = rep.html_url;
-        a.target = '_blank';
-        a.innerHTML = rep.full_name;
-        li.appendChild(a);
-        if (rep.description) {
-            let p = document.createElement('p');
-            p.innerHTML = rep.description;
-            li.appendChild(p);
-        }
-    })
-  }
-
-  window.onload = function () {
-    fetchRepos();
-  };
   
   return (
       <div className="App">
@@ -67,11 +43,10 @@ function App() {
                   <h3 className="title"><span className="navigation" id="s">S</span> Summary</h3>
                   <p className="summary-description">I'm an enthusiastic and detail-oriented Frontend Software Engineer seeking an entry-level position with Company to use my skills in coding, troubleshooting complex problems, and assisting in the timely completion of projects. I look forward to interesting projects, opportunities for professional growth and development.</p>
               </div>
+
               {/* Projects */}
-              <div className="projects">
-                  <h3 className="title"><span className="navigation" id="p">P</span> Projects</h3>
-                  <ul id="repos"></ul>
-              </div>
+              <Projects/>
+              
               {/* Skills */}
               <div className="skills">
                   <h3 className="title"><span className="navigation" id="h">H</span> Skills Highlights</h3>
